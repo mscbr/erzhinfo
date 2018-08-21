@@ -16,5 +16,7 @@ Features
 Design
 ------
 - colors: 
-	- #525956 (dark)
-	- #f3e2df (bright)
+	b&w
+- font:
+	href="https://fonts.googleapis.com/css?family=Didact+Gothic"
+	font-family: 'Didact Gothic', sans-serif;
