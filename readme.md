@@ -12,3 +12,9 @@ Features
 	- upcoming performances
 	- music / videos
 - recents
+
+Design
+------
+- colors: 
+	- #525956 (dark)
+	- #f3e2df (bright)
