@@ -1,21 +1,19 @@
 
-function showEnter() {
+var showEnter = function() {
 		//getting DOM elements
-		var enterTitle = document.getElementsByClassName("enter")[1];
-		var innerCircle = document.getElementsByClassName("inner-circle")[1];
+		var enterTitle = document.getElementsByClassName("enter")[0];
+		var innerCircle = document.getElementsByClassName("inner-circle")[0];
 		// hiding/showing .enter functions
-		var visVisible = function(element) {
-			element.style.visibility = "visible";
+		function visVisible() {
+			enterTitle.style.visibility = "visible";
 		}
-		var visHidden = function(element) {
-			element.style.visibility = "hidden";
+		function visHidden() {
+			enterTitle.style.visibility = "hidden";
 		}
 		//executing hide/show when hover on .inner-circle
-		innerCircle.onmouseover = function() {visVisible(enterTitle)};
-		innerCircle.onmouseout = function() {visHidden(enterTitle)};
-	}
+		innerCircle.addEventListener("mouseover", visVisible);
+		innerCircle.addEventListener("mouseout", visHidden);
+}
 
-document.addEventListener("DOMContentLoaded", function(event) {
-	//function execution when all DOM elements are already loaded
-  	showEnter();
-});
+
+$(document).ready(showEnter);
