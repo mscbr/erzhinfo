@@ -101,6 +101,10 @@ body {
 	width: 120px;*/
 	/*animation: none;*/
 }
+.inner-circle:active {
+	animation: none;
+	background-color: red;
+}
 
 @keyframes pulse {
 	0% {
@@ -127,6 +131,7 @@ body {
 	animation-timing-function: ease-out;
 
 }
+
 
 h1 {
 	display: block;
