@@ -103,7 +103,20 @@ body {
 }
 .inner-circle:active {
 	animation: none;
-	background-color: red;
+	-webkit-transition: 0.2s;
+	transform: scale(1.7);
+	/*background-color: red;*/
+}
+.page-fadeout {
+	animation-name: toWhite;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+@keyframes toWhite {
+	100% {
+		background-color: #ffffff;
+	}
 }
 
 @keyframes pulse {
