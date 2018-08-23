@@ -63,9 +63,8 @@ body {
 	background-color: #ffffff;
 	position: absolute;
   	margin: auto;
-  	top: 0;
+  	top: 250px;
   	right: 0;
-  	bottom: 0;
   	left: 0;
 	height: 150px;
 	width: 150px;
@@ -82,14 +81,14 @@ body {
 	background-color: #000000;
 	position: absolute;
 	margin: auto;
-	top: 0;
+	top: 300px;
 	right: 0;
-	bottom: 0;
 	left: 0;
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
 	-webkit-transition: all 1.2s;
+	opacity: 0.95;
 	animation-name: pulse;
 	animation-duration: 4.6s;
 	animation-timing-function: ease-in-out;
@@ -108,11 +107,25 @@ body {
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(3);
+		transform: scale(2);
 	}
 	100% {
 		transform: scale(1);
 	}
+}
+.arrow {
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	animation-name: enterHeading;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+
 }
 
 h1 {
@@ -132,7 +145,7 @@ h1 {
 }
 @keyframes enterHeading {
 	100% {
-		opacity: 1;
+		opacity: 0.95;
 		text-shadow: 10px 0px #ffffff;
 	}
 }
@@ -143,25 +156,26 @@ h1 {
 	width: 50px;
 	position: absolute;
 	margin: auto;
-	top: 48%;
-	left: 47.2%;
+	top: 312px;
+	left: 47.5%;
 	cursor: pointer;
 	pointer-events: none;
 	visibility: hidden;
+	opacity: 0.95;
+	/*transition: all 1.2s;*/
 
-	/*opacity: 0.1;*/
-	/*border: 2px solid white;*/
 }
-
-/*WORK ON THE "ENTER" APPEARING ISSUE due tu pointer-events*/
-/*doo JS DOM manipulation with mousover and style change*/
-
 p {
 	font-size: 20px;
 	text-decoration: underline;
 	letter-spacing: 2.2px;
 	text-align: center;
 	
+}
+
+	/*top: 30%;*/
+	/*text-align: center;*/
+	/*transform: scale(0.8);*/
 }
 
 
