@@ -28,7 +28,7 @@ $(document).ready(setButton);
 
 //function that delays a href to index.html
 var delay = function(url) {
-	setTimeout( function() { window.location = url }, 2300);
+	setTimeout( function() { window.location = url }, 2000);
 }
 
 
