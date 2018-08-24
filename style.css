@@ -78,16 +78,28 @@ main {
 	border-radius: 5%;
 	left: 20%;
 	right: 20%;
-	/*design grid within*/
+	display: grid;
+	gap: 2px;
+	grid-template-columns: 390px 390px;
+	grid-template-rows: 500px 1fr;
+	grid-template-areas: "content navi"
+						 "recent recent"
 
 }
-
-.recents {
-	/*grid-area: recent;*/
-	/*height: 50px;
-	width: 75px;*/
-	background-color: #ffffff;
+nav {
+	grid-area: navi ;
 	border-radius: 5%;
+	border: solid 1px white;
+}
+.content-space {
+	grid-area: content ;
+	border-radius: 5%;
+	border: solid 1px white;
+}
+.recents {
+	grid-area: recent ;
+	border-radius: 5%;
+	border: solid 1px white;
 }
 .arrow {
 	position: absolute;
