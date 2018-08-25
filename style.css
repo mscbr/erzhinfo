@@ -72,7 +72,7 @@ body {
 
 main {
 	position:fixed;
-	background-color: #000000;
+	background-color: transparent;
 	height: 100%;
 	width: 780px;
 	border-radius: 5%;
@@ -80,16 +80,30 @@ main {
 	right: 20%;
 	display: grid;
 	gap: 2px;
-	grid-template-columns: 390px 390px;
-	grid-template-rows: 500px 1fr;
+	grid-template-columns: 480px 300px;
+	grid-template-rows: 420px 1fr;
 	grid-template-areas: "content navi"
 						 "recent recent"
-
+}
+main > div, nav{
+	background-color: #000000;
 }
 nav {
 	grid-area: navi ;
 	border-radius: 5%;
 	border: solid 1px white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	overflow: hidden;
+}
+button {
+	background-color: transparent;
+	color: #ffffff;
+	/*border: 0.2px dashed #ffffff;*/
+	/*border-radius: 5px;*/
+	font-size: 25px;
+	/*overflow:hidden;*/
 }
 .content-space {
 	grid-area: content ;
