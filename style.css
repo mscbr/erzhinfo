@@ -106,9 +106,22 @@ button {
 	/*overflow:hidden;*/
 }
 .content-space {
-	grid-area: content ;
+	grid-area: content;
 	border-radius: 5%;
 	border: solid 1px white;
+}
+.content-box {
+	display: none;
+	height: 80%;
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+	border: solid 1px red;
+	background-color: red;
+	opacity: 0.5;
+}
+.display-initial {
+	display: block;
 }
 .recents {
 	grid-area: recent ;
