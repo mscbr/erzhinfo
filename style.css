@@ -100,10 +100,15 @@ nav {
 button {
 	background-color: transparent;
 	color: #ffffff;
-	/*border: 0.2px dashed #ffffff;*/
-	/*border-radius: 5px;*/
 	font-size: 25px;
-	/*overflow:hidden;*/
+	height: 55px;
+	/*BOX SHADOW TESTS for HOVER*/
+}
+.triangle-icon {
+	position: absolute;
+	height: 25px;
+	width: 30px;
+	margin-left: -40px;
 }
 .content-space {
 	grid-area: content;
