@@ -1,3 +1,7 @@
+// front end features design for 
+// erzh.info intro.html
+// designed by mscbr
+
 //intro-circle button functions setup
 var setButton = function() {
 		//getting DOM elements
