@@ -102,13 +102,23 @@ button {
 	color: #ffffff;
 	font-size: 25px;
 	height: 55px;
+	transition: 0.6s;
+	
+}
+button:hover {
 	/*BOX SHADOW TESTS for HOVER*/
+	background-color: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
 }
 .triangle-icon {
+	display: none;
 	position: absolute;
 	height: 25px;
 	width: 30px;
 	margin-left: -40px;
+}
+.display-inline {
+	display: inline;
 }
 .content-space {
 	grid-area: content;
@@ -125,7 +135,7 @@ button {
 	background-color: red;
 	opacity: 0.5;
 }
-.display-initial {
+.display-block {
 	display: block;
 }
 .recents {
