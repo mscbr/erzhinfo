@@ -125,6 +125,16 @@ button:hover {
 	border-radius: 5%;
 	border: solid 1px white;
 }
+.animated-title {
+	display: none;
+	height: 80%;
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+	border: solid 1px red;
+	background-color: blue;
+	opacity: 0.5;
+}
 .content-box {
 	display: none;
 	height: 80%;
