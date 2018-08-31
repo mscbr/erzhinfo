@@ -67,6 +67,7 @@ h1 {
 	text-align: center;
 	text-decoration: underline;
 	letter-spacing: 5px;
+	margin-top: 10px;
 }
 main {
 	position:fixed;
