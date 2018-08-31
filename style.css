@@ -64,6 +64,9 @@ body {
 }
 h1 {
 	font-size: 24px;
+	text-align: center;
+	text-decoration: underline;
+	letter-spacing: 5px;
 }
 main {
 	position:fixed;
@@ -84,7 +87,7 @@ main > div, nav{
 	background-color: #000000;
 }
 nav {
-	grid-area: navi ;
+	grid-area: navi;
 	border-radius: 5%;
 	border: solid 1px white;
 	display: flex;
@@ -108,11 +111,23 @@ button:hover {
 	display: none;
 	position: absolute;
 	height: 25px;
-	width: 30px;
-	margin-left: -40px;
+	width: 25px;
+	margin-left: -45px;
 }
 .display-inline {
 	display: inline;
+	animation-name: fadein;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .content-space {
 	grid-area: content;
@@ -138,13 +153,14 @@ button:hover {
 	margin: 5px;
 	text-align: justify;
 	line-height: 150%;
-	/*border: solid 1px red;*/
-	/*background-color: red;*/
-	/*opacity: 0.5;*/
 	overflow: auto;
 }
 .display-block {
 	display: block;
+	animation-name: fadein;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
 	/*!!!add an animation to fade in*/
 }
 .recents {

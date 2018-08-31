@@ -27,4 +27,12 @@ function iconTab() {
 	document.getElementsByTagName("button")[4].addEventListener("click", function() {addClass(4);});
 
 }
+function setVideos() {
+	//run function only if VIDEOS DIV is visible
+
+	//inserting HTML with YT videos into videos section
+	var videosContainer = document.getElementById("videos-container");
+	videosContainer.innerHTML = document.getElementById("yt-videos").innerHTML;
+}
 $(document).ready(iconTab);
+// $(document).ready(setVideos);
