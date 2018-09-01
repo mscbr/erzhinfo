@@ -137,13 +137,17 @@ button:hover {
 }
 .animated-title {
 	display: none;
-	height: 80%;
-	width: 80%;
-	padding: 10px;
-	margin: 10px;
-	border: solid 1px red;
-	background-color: blue;
-	opacity: 0.5;
+	height: 95%;
+	width: 95%;
+	padding-right: 10px;
+	padding-left: 5px;
+	margin: 5px;
+	text-align: justify;
+	line-height: 150%;
+	overflow: auto;
+}
+#erzhinfo-title {
+	margin-top: 135px;
 }
 .content-box {
 	display: none;
