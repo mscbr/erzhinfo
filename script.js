@@ -46,10 +46,6 @@ function main() {
 	document.getElementsByTagName("button")[4].addEventListener("click", function() {addClass(4);});
 
 }
-function setVideos() {
-	//inserting HTML with YT videos into videos section
-	var videosContainer = document.getElementById("videos-container");
-	videosContainer.innerHTML = document.getElementById("yt-videos").innerHTML;
-}
+
 $(document).ready(main);
 // $(document).ready(setVideos);
