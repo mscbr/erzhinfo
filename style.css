@@ -205,4 +205,9 @@ button:hover {
 		opacity: 1;
 	}
 }
+#fb-icon {
+	height: 30px;
+	width: auto;
+	margin-left: 10px;
+}
 
