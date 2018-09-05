@@ -22,6 +22,8 @@ function main() {
 
 	}
 
+	//DO THE SAME FUNCTION AS refreshVideos for MUSIC section!!!
+
 	//function that stops videos in VIDEOS tab playing when tab is not displayed 
 	//and loads videos when respective tab button is clicked
 	//---------
