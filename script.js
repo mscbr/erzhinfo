@@ -3,10 +3,15 @@
 // designed by mscbr
 
 function main() {
-	//each buton receives event listener - opens ~ tab when clicked
+	//setting content
 	setMusic();
-	var buttonLength = document.getElementsByTagName("button").length;
 	setVideos();
+	//setting RECENTS section
+	document.getElementById("slide1").innerHTML = document.getElementById("slide1-content").innerHTML;
+	document.getElementById("slide2").innerHTML = document.getElementById("slide2-content").innerHTML;
+	
+
+	var buttonLength = document.getElementsByTagName("button").length;
 	//function that clears display class from all content-box 
 	//and then add display class according to clicked button
 	//it also refreshes and add button icon accordingly
@@ -72,17 +77,14 @@ function fillButton(index) {
 	}
 	slide[index].classList.add("slide-block");
 
-	
+	//refreshing content when slide is changed
+	if(index === 0) {
+		document.getElementById("slide2").innerHTML = document.getElementById("slide2-content").innerHTML;	
+	} else if (index === 1) {
+		document.getElementById("slide1").innerHTML = document.getElementById("slide1-content").innerHTML;
+	}
 }
-//when RECENTS area is clicked reset animated-title to block display
-// function resetView() {
-// 	//clear out display block from content-boxes
-// 	for (i = 0; i < 5; i++) {
-// 		document.getElementsByClassName("content-box")[i].classList.remove("display-block");
-// 		document.getElementsByClassName("triangle-icon")[i].classList.remove("display-inline");
-// 	}
-// 	document.getElementsByClassName("animated-title")[0].classList.add("display-block");
-// }
+
 
 
 
