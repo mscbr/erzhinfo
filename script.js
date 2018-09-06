@@ -69,14 +69,14 @@ function fillButton(index) {
 	
 }
 //when RECENTS area is clicked reset animated-title to block display
-function resetView() {
-	//clear out display block from content-boxes
-	for (i = 0; i < 5; i++) {
-		document.getElementsByClassName("content-box")[i].classList.remove("display-block");
-		document.getElementsByClassName("triangle-icon")[i].classList.remove("display-inline");
-	}
-	document.getElementsByClassName("animated-title")[0].classList.add("display-block");
-}
+// function resetView() {
+// 	//clear out display block from content-boxes
+// 	for (i = 0; i < 5; i++) {
+// 		document.getElementsByClassName("content-box")[i].classList.remove("display-block");
+// 		document.getElementsByClassName("triangle-icon")[i].classList.remove("display-inline");
+// 	}
+// 	document.getElementsByClassName("animated-title")[0].classList.add("display-block");
+// }
 
 
 
