@@ -48,6 +48,12 @@ function main() {
 	document.getElementsByTagName("button")[4].addEventListener("click", function() {addClass(4);});
 
 }
-
 $(document).ready(main);
-// $(document).ready(setVideos);
+
+//functions for slider's onclicks
+
+
+
+
+
+

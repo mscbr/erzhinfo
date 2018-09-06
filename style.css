@@ -166,7 +166,6 @@ button:hover {
 	animation-duration: 0.8s;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
-	/*!!!add an animation to fade in*/
 }
 .recents {
 	grid-area: recent ;
@@ -222,24 +221,29 @@ button:hover {
 }
 /*RECENT SLIDES*/
 .slide {
-	display: none;
+	/*display: block;*/
 	width: 100%;
-	height: 80%;
-	margin-top: 10px;
+	height: 90%;
+	margin-top: 1px;
+}
+#recent-music {
+	display: none;
+}
+#recent-video {
+	display: block;
 }
 #slide-buttons {
-	/*display bottommiddle*/
-	position: absolute;
+	/*display topmiddle*/
+	position: relative;
 	left: 50%;
-	bottom: 0;
 	transform: translate(-50%, 0%);
 	/*rest*/
 	width: 100%;
 	color: #fff;
 	text-align: center;
 	padding: 0.01em 16px;
-	margin-top: 16px;
-	margin-bottom: 16px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 	font-size: 18px;
 
 }
