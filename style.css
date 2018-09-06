@@ -55,6 +55,7 @@ html, body {
     height: 100%;
 }
 body {
+	display: -ms-grid;
 	display: grid;
 	background-color: #ffffff;
 	font-family: 'Didact Gothic', sans-serif;
@@ -78,23 +79,34 @@ main {
 	border-radius: 5%;
 	left: 20%;
 	right: 20%;
+	display: -ms-grid;
 	display: grid;
 	gap: 2px;
-	grid-template-columns: 480px 300px;
-	grid-template-rows: 420px 1fr;
-	grid-template-areas: "content navi"
+	    -ms-grid-columns: 480px 2px 300px;
+	    grid-template-columns: 480px 300px;
+	    -ms-grid-rows: 420px 2px 1fr;
+	    grid-template-rows: 420px 1fr;
+	    grid-template-areas: "content navi"
 						 "recent recent"
 }
 main > div, nav{
 	background-color: #000000;
 }
 nav {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
 	grid-area: navi;
 	border-radius: 5%;
 	border: solid 1px white;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	overflow: hidden;
 }
 button {
@@ -102,6 +114,8 @@ button {
 	color: #ffffff;
 	font-size: 25px;
 	height: 55px;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
 	transition: 0.2s;
 	border-left: none;
 	border-right: none;
@@ -122,10 +136,22 @@ button:hover {
 }
 .display-inline {
 	display: inline;
-	animation-name: fadein;
-	animation-duration: 0.8s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	-webkit-animation-name: fadein;
+	        animation-name: fadein;
+	-webkit-animation-duration: 0.8s;
+	        animation-duration: 0.8s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	        animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+}
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 @keyframes fadein {
 	0% {
@@ -136,6 +162,8 @@ button:hover {
 	}
 }
 .content-space {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
 	grid-area: content;
 	border-radius: 5%;
 	border: solid 1px white;
@@ -167,12 +195,19 @@ button:hover {
 }
 .display-block {
 	display: block;
-	animation-name: fadein;
-	animation-duration: 0.8s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	-webkit-animation-name: fadein;
+	        animation-name: fadein;
+	-webkit-animation-duration: 0.8s;
+	        animation-duration: 0.8s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	        animation-timing-function: cubic-bezier(.76,.2,.7,.96);
 }
 .recents {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
 	grid-area: recent ;
 	border-radius: 5%;
 	border: solid 1px white;
@@ -191,18 +226,31 @@ button:hover {
 }
 .fade-in {
 	opacity: 0;
-	animation-name: opacityRise;
-	animation-duration: 3s;
-	animation-timing-function: cubic-bezier(1,.01,.79,1.04);
-	animation-fill-mode: forwards;
+	-webkit-animation-name: opacityRise;
+	        animation-name: opacityRise;
+	-webkit-animation-duration: 3s;
+	        animation-duration: 3s;
+	-webkit-animation-timing-function: cubic-bezier(1,.01,.79,1.04);
+	        animation-timing-function: cubic-bezier(1,.01,.79,1.04);
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
 }
 /*fade in fix for background shape*/
 .fade {
 	opacity: 0;
-	animation-name: opacityRise;
-	animation-duration: 2s;
-	animation-timing-function: cubic-bezier(1,-0.15,1,.52);
-	animation-fill-mode: forwards;
+	-webkit-animation-name: opacityRise;
+	        animation-name: opacityRise;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-timing-function: cubic-bezier(1,-0.15,1,.52);
+	        animation-timing-function: cubic-bezier(1,-0.15,1,.52);
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+@-webkit-keyframes opacityRise {
+	100% {
+		opacity: 1;
+	}
 }
 @keyframes opacityRise {
 	100% {
@@ -234,16 +282,22 @@ button:hover {
 
 .slide-block {
 	display: block;
-	animation-name: fadein;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	-webkit-animation-name: fadein;
+	        animation-name: fadein;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: cubic-bezier(.76,.2,.7,.96);
+	        animation-timing-function: cubic-bezier(.76,.2,.7,.96);
 }
 #slide-buttons {
 	/*display topmiddle*/
 	position: relative;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
+	    -ms-transform: translate(-50%, 0%);
+	        transform: translate(-50%, 0%);
 	/*rest*/
 	width: 100%;
 	color: #fff;
@@ -273,6 +327,5 @@ button:hover {
 	color: #000;
 	background-color: #fff;
 }
-
 
 
