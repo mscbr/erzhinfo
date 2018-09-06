@@ -4,14 +4,14 @@
 
 function main() {
 	//each buton receives event listener - opens ~ tab when clicked
-	// debugger;
+	setMusic();
 	var buttonLength = document.getElementsByTagName("button").length;
 	setVideos();
 	//function that clears display class from all content-box 
 	//and then add display class according to clicked button
 	//it also refreshes and add button icon accordingly
 	function addClass(buttonNum) {
-		refreshVideos();
+		refreshVidMu();
 		for (var i = 0; i < buttonLength; i++) {
 			document.getElementsByClassName("content-box")[i].classList.remove("display-block");
 			document.getElementsByClassName("triangle-icon")[i].classList.remove("display-inline");
@@ -22,8 +22,11 @@ function main() {
 
 	}
 
-	//DO THE SAME FUNCTION AS refreshVideos for MUSIC section!!!
-
+	//function that stops/reload MUSIC when related tab is not displayed
+	function setMusic() {
+		var musicContainer= document.getElementById("music-container");
+		musicContainer.innerHTML = document.getElementById("sc-music").innerHTML;
+	}
 	//function that stops videos in VIDEOS tab playing when tab is not displayed 
 	//and loads videos when respective tab button is clicked
 	//---------
@@ -35,9 +38,12 @@ function main() {
 		videosContainer.innerHTML = document.getElementById("yt-videos").innerHTML;
 
 	}
-	function refreshVideos() {
+	function refreshVidMu() {
 		if(document.getElementById("videos-container").classList.value === "content-box display-block") {
 			setVideos();
+		}
+		if(document.getElementById("music-container").classList.value === "content-box display-block") {
+			setMusic();
 		}
 	}
 	//assigning function tu buttons
