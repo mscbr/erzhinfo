@@ -53,7 +53,9 @@ $(document).ready(main);
 //functions for slider's onclicks
 
 
-
+function fillButton(index) {
+	
+}
 
 
 
