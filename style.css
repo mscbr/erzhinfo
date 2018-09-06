@@ -82,12 +82,12 @@ main {
 	display: -ms-grid;
 	display: grid;
 	gap: 2px;
-	    -ms-grid-columns: 480px 2px 300px;
-	    grid-template-columns: 480px 300px;
-	    -ms-grid-rows: 420px 2px 1fr;
-	    grid-template-rows: 420px 1fr;
-	    grid-template-areas: "content navi"
-						 "recent recent"
+	-ms-grid-columns: 480px 2px 300px;
+	grid-template-columns: 480px 300px;
+	-ms-grid-rows: 420px 2px 1fr;
+	grid-template-rows: 420px 1fr;
+	grid-template-areas: "content navi"
+						 "recent recent";
 }
 main > div, nav{
 	background-color: #000000;
@@ -328,4 +328,21 @@ button:hover {
 	background-color: #fff;
 }
 
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 760px) {
+	main {
+		position: relative;
+		grid-template-rows: 200px 1fr;
+		grid-template-areas: "navi"
+							 "content";
+		width: 90%;
+		left: 10%;
+		right: 10%;
+		margin: 0;
+
+	}
+	.recents {
+		display: none;
+	}
+}
 
