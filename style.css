@@ -48,6 +48,7 @@ table {
 	border-spacing: 0;
 }
 
+
 /* INDEX PAGE STYLING */
 html, body {
     margin: 0;
@@ -102,6 +103,10 @@ button {
 	font-size: 25px;
 	height: 55px;
 	transition: 0.2s;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.1px solid #fff;
+	border-top: 0.1px solid #fff;
 	
 }
 button:hover {
