@@ -51,10 +51,20 @@ function main() {
 $(document).ready(main);
 
 //functions for slider's onclicks
-
-
 function fillButton(index) {
-	
+	//changing color of slider button
+	var button = document.getElementsByClassName("slider-button");
+	for (var i = 0; i < button.length; i++) {
+		button[i].classList.remove("slider-button-white");
+	}
+	button[index].classList.add("slider-button-white");
+
+	//changing currently displayed content
+	var slide = document.getElementsByClassName("slide");
+	for (i = 0; i < slide.length; i++) {
+		slide[i].classList.remove("slide-block");
+	}
+	slide[index].classList.add("slide-block");
 }
 
 

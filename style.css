@@ -226,16 +226,18 @@ button:hover {
 }
 /*RECENT SLIDES*/
 .slide {
-	/*display: block;*/
+	display: none;
 	width: 100%;
 	height: 90%;
 	margin-top: 1px;
 }
-#recent-music {
-	display: none;
-}
-#recent-video {
+
+.slide-block {
 	display: block;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.76,.2,.7,.96);
 }
 #slide-buttons {
 	/*display topmiddle*/
@@ -271,5 +273,6 @@ button:hover {
 	color: #000;
 	background-color: #fff;
 }
+
 
 
