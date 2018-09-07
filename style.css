@@ -332,17 +332,31 @@ button:hover {
 @media only screen and (max-width: 760px) {
 	main {
 		position: relative;
-		grid-template-rows: 200px 1fr;
+		grid-template-rows: 150px 90%;
 		grid-template-areas: "navi"
 							 "content";
-		width: 90%;
-		left: 10%;
-		right: 10%;
+		width: 100vw;
+		left: 0;
 		margin: 0;
 
 	}
 	.recents {
 		display: none;
+	}
+	#erzhinfo-title {
+		width: 100vw;
+		height: auto;
+	}
+	nav {
+		width: 100vw;
+		height: auto;
+	}
+	.content-space {
+		width: 100vw;
+		height: auto;
+	}
+	button {
+		font-size: 18px;
 	}
 }
 
