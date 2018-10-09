@@ -364,5 +364,14 @@ button:hover {
 	button {
 		font-size: 18px;
 	}
+	.arrow {
+		animation: background-fade 2s ease-out forwards;
+	}
+	@keyframes background-fade {
+		100% {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
 }
 
