@@ -240,19 +240,25 @@ button:hover {
 	opacity: 0;
 	-webkit-animation-name: opacityRise;
 	        animation-name: opacityRise;
-	-webkit-animation-duration: 2s;
-	        animation-duration: 2s;
+	-webkit-animation-duration: 4s;
+	        animation-duration: 4s;
 	-webkit-animation-timing-function: cubic-bezier(1,-0.15,1,.52);
 	        animation-timing-function: cubic-bezier(1,-0.15,1,.52);
 	-webkit-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards;
 }
 @-webkit-keyframes opacityRise {
+	40% {
+		opacity: 0;
+	}
 	100% {
 		opacity: 1;
 	}
 }
 @keyframes opacityRise {
+	40% {
+		opacity: 0;
+	}
 	100% {
 		opacity: 1;
 	}
